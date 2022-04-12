@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm'
+import { TagsModule } from './tags/tags.module';
 import 'dotenv/config'
 
 @Module({
@@ -15,6 +16,7 @@ import 'dotenv/config'
     entities: [],
     autoLoadEntities: true,
     synchronize: true,
-  })]
+  }),
+    TagsModule]
 })
 export class AppModule {}
